@@ -1,0 +1,21 @@
+<h5 class="headingMenu">Here You can find our restaurant specialities :</h5>
+<div class="container text-center">
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <div *ngFor="let order of orders; index as i" class="col p-2">
+        <div  class="card" style="width: 25rem;">
+        <img style="height:20rem;" src="{{order.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{order.name}}</h5>
+          <p class="card-text">{{order.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Price: {{order.price}} €</li>
+        </ul>
+        <div *ngIf="order.availability; else elseBlock" class="card-body">
+            <button routerLink="/orders/{{ i }}" type="button" class="btn btn-primary">Details <i class="bi bi-book-fill"></i></button>
+        </div>
+        <ng-template #elseBlock><span class="text-danger">This product is not availible at the moment.</span><i class="bi bi-emoji-frown-fill p-2"></i></ng-template>
+      </div>
+    </div>
+    </div>
+</div>

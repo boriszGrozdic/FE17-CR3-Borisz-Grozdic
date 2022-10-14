@@ -1,0 +1,25 @@
+<h1>More details about our orders:</h1>
+
+<div id="mainDiv" class="container text-center d-flex">
+    
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <div  class="col p-2">
+        <div  class="card" style="width: 25rem;">
+        <img style="height:20rem;" src="{{order.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{order.name}}</h5>
+          <p class="card-text">{{order.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Price: {{order.price}} €</li>
+        </ul>
+        <div class="card-body">
+          <button (click)="addToCart()" type="button" class="btn btn-success">Order <i class="bi bi-bag-fill"></i></button>
+        </div>
+        
+      </div>
+    </div>
+    </div>
+    <div><p class="moreD">{{order.details}}</p></div>
+    
+</div>

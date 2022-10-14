@@ -1,0 +1,37 @@
+.imgText {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/18/14/05/brick-wall-1834784_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 30rem;
+    position: relative;
+    filter: brightness(80%);
+}
+
+h1 {
+    position: absolute;
+    margin-left: 12rem;
+    margin-top: 6rem;
+    font-size: 4rem;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.text1 {
+    position: absolute;
+    margin-left: 25rem;
+    margin-top: 12rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.text2 {
+    position: absolute;
+    margin-left: 20rem;
+    margin-top: 16rem;
+    font-size: 2rem;
+    color: white;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
