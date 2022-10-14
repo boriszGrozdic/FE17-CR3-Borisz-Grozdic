@@ -15,6 +15,8 @@ export class CartService {
   total3:number = 0;  
   total4:number = 0;
   
+  
+  
   constructor() { }
 
   addToCart(product: IOrders) {
@@ -29,14 +31,15 @@ export class CartService {
     this.items = [];
     return this.items;
   }
-
+  
+  
   
   sumTotal () {
-    
+    this.total = 0
     for(let val of this.items){
     
-    this.total += val.price 
-    }
+    this.total +=  val.price
+  }
     return this.total
     
   }

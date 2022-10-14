@@ -21,6 +21,6 @@
       <li class="list-group-item">Total amount : {{total}} € </li>
       <li class="list-group-item">Service 10% : {{total2}} € </li>
       <li class="list-group-item">Discount 15% if total amount is bigger then 40€ : <span *ngIf="total > 40">{{total3}}</span> € </li>
-      <li class="list-group-item">Total amount with 15% : {{total4}} € </li>
+      <li class="list-group-item">Total amount with 15% : <span *ngIf="total > 40">{{total4}}</span> € </li>
     </ul>
   </div>
