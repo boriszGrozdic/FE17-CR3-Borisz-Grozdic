@@ -3,12 +3,17 @@ import { IOrders } from './orders/IOrders';
 
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
   items: Array <IOrders> = [];
   total:number = 0;
+  total1:number = 0;
+  total2:number = 0;
+  total3:number = 0;  
+  total4:number = 0;
   
   constructor() { }
 
@@ -25,12 +30,37 @@ export class CartService {
     return this.items;
   }
 
+  
   sumTotal () {
+    
     for(let val of this.items){
-      this.total +- val.price
+    
+    this.total += val.price 
     }
     return this.total
+    
   }
+  
+
+  sumService () {
+    
+      this.total2 = this.total * 0.1;
+    
+    
+    return Math.floor(this.total2)
+  }
+
+  sumBigger () {
+    this.total3 = this.total * 0.15;
+    return Math.floor(this.total3)
+  }
+
+  sumTotalDiscount () {
+    this.total4 = this.total - Math.floor(this.total3)
+    return (this.total4)
+  }
+  
+
 
 
   

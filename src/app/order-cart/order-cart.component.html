@@ -18,9 +18,9 @@
 
 <div id="amount" class="card" style="width:40rem;">
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Total amount : </li>
-      <li class="list-group-item">Service 10% : </li>
-      <li class="list-group-item">Discount 15% if total amount is bigger then 40€ : </li>
-      <li class="list-group-item">Total amount with 15% : </li>
+      <li class="list-group-item">Total amount : {{total}} € </li>
+      <li class="list-group-item">Service 10% : {{total2}} € </li>
+      <li class="list-group-item">Discount 15% if total amount is bigger then 40€ : <span *ngIf="total > 40">{{total3}}</span> € </li>
+      <li class="list-group-item">Total amount with 15% : {{total4}} € </li>
     </ul>
   </div>
