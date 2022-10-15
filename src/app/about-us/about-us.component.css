@@ -66,4 +66,10 @@ body {
   .button:hover {
     background-color: #555;
   }
+
+  #inputs {
+    padding-bottom: 2rem;
+    width: 70%;
+    padding-left: 30rem;
+  }
   
