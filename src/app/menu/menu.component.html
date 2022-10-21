@@ -12,6 +12,7 @@
           <li class="list-group-item">Price: {{order.price}} €</li>
         </ul>
         <div *ngIf="order.availability; else elseBlock" class="card-body">
+            <button (click)="addToCart(order)" type="button" class="btn btn-success m-2">Order <i class="bi bi-bag-fill"></i></button>
             <button routerLink="/orders/{{ i }}" type="button" class="btn btn-primary">Details <i class="bi bi-book-fill"></i></button>
         </div>
         <ng-template #elseBlock><span class="text-danger">This product is not availible at the moment.</span><i class="bi bi-emoji-frown-fill p-2"></i></ng-template>

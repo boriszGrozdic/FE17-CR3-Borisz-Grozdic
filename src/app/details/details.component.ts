@@ -22,7 +22,6 @@ export class DetailsComponent implements OnInit {
   }
 
   addToCart() {
-    alert("Your product has been added to the cart!")
     this.cs.addToCart(this.order)
   }
 
